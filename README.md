@@ -16,5 +16,12 @@
 
 采用 Equivalent One-Diode 光伏模型和逐时动态外部建筑遮挡。屋顶可用比例为 64%，立面面积基于建筑墙体面积与 WWR 计算。
 
-本仓库仅包含当前正式结果及图表，已排除失败运行目录、旧版本归档、天气文件、模型程序和所有密钥。
+## 下载与校验
 
+```bash
+gh release download v1.0.0 --repo Aspartame-yao/nanshan-solar-pv-prediction-results
+shasum -a 256 -c RELEASE_ASSETS.sha256
+for file in *part-*.tar; do tar -xf "$file"; done
+```
+
+本仓库仅包含当前正式结果及图表，已排除失败运行目录、旧版本归档、天气文件、模型程序和所有密钥。
